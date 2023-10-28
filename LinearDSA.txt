@@ -1,0 +1,31 @@
+Certainly! In Java, linear search is a simple searching algorithm that searches for a specific element in an array. Here's an example of how you can perform linear search in Java:
+
+```java
+public class LinearSearch {
+
+    public static int linearSearch(int[] arr, int target) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == target) {
+                return i; // Element found, return its index
+            }
+        }
+        return -1; // Element not found in the array
+    }
+
+    public static void main(String[] args) {
+        int[] array = {2, 5, 7, 1, 9, 3, 6};
+        int target = 7;
+        int result = linearSearch(array, target);
+
+        if (result != -1) {
+            System.out.println("Element found at index: " + result);
+        } else {
+            System.out.println("Element not found in the array.");
+        }
+    }
+}
+```
+
+In this example, the `linearSearch` method takes an array (`arr`) and a target element (`target`) as parameters. It iterates through the array using a `for` loop and compares each element with the target value. If a match is found, it returns the index of the element. If the element is not found in the array, the method returns -1.
+
+In the `main` method, an example array is defined, and the `linearSearch` method is called to search for a target element (`7` in this case). The program will output "Element found at index: 2" because `7` is present at index `2` in the given array.
